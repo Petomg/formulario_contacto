@@ -1,5 +1,5 @@
 <?php 
-	class ConectionDB{
+	class ConnectionDB{
 
 		private $server, $username, $password, $dbname;
 
@@ -12,7 +12,7 @@
 			$this->dbname = $dbconfig["dbname"];
 		}
 
-		public function conection(){
+		public function connection(){
 
 			try {
 			
