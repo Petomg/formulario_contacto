@@ -14,27 +14,27 @@
 		</div>
 		<div>
 			<label for="first_name">First Name</label>
-			<input type="text" id="first_name" required>
+			<input type="text" id="first_name" name='first_name' required>
 		</div>
 		<div>
 			<label for="last_name">Last Name</label>
-			<input type="text" id="last_name" required>
+			<input type="text" id="last_name" name='last_name' required>
 		</div>
 		<div>
 			<label for="company">Company</label>
-			<input type="text" id="company" required>
+			<input type="text" id="company" name='company' >
 		</div>
 		<div>
 			<label for="title">Title</label>
-			<input type="text" id="title" required>
+			<input type="text" id="title" name='title' required>
 		</div>
 		<div>
 			<label for="email">Email Address</label>
-			<input type="text" id="email" required>
+			<input type="text" id="email" name='email' required>
 		</div>
 		<div>
 			<label for="inc_type">Inquiry Type</label>
-			<select id="inc_type" required>
+			<select id="inc_type" name='inc_type' required>
   				<option value="example1">example1</option> <!-- El atributo value me indica lo que se le envia al servidor -->
   				<option value="example2">example2</option> 
   				<option value="example3">example3</option>
