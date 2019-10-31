@@ -6,7 +6,7 @@
 
 </head>
 <body>
-	<form action="/var/www/html/formulario_contacto/controller/contact_controller.php" method="post">
+	<form action="/formulario_contacto/controller/contact_controller.php" method="post" autocomplete="off">
 		<div id="form_header">
 			<h1>Send Us an Email</h1>
 			<p>Please specify the nature of your request in the comment section</p>
@@ -33,8 +33,8 @@
 			<input type="text" id="email" name='email' required>
 		</div>
 		<div>
-			<label for="inc_type">Inquiry Type</label>
-			<select id="inc_type" name='inc_type' required>
+			<label for="inq_type">Inquiry Type</label>
+			<select id="inq_type" name='inq_type' required>
   				<option value="example1">example1</option> <!-- El atributo value me indica lo que se le envia al servidor -->
   				<option value="example2">example2</option> 
   				<option value="example3">example3</option>
@@ -43,7 +43,7 @@
 		</div>
 		<div>
 			<label for="message">Message</label>
-			<textarea id="message" required></textarea>
+			<textarea id="message" name="message" required></textarea>
 		</div>
 		<div id='send_button'>
 			<button type="submit">Send Message</button>

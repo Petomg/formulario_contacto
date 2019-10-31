@@ -60,7 +60,17 @@ function verif_user($fname, $lname, $email, $company){
 	return $valid;	
 }
 
-function verif_inquiries(){
-	
+function verif_inquirie($title, $type, $message){ # Creo que no quiero muchas mas restricciones.
+	$valid = true;
+	if(!(isset($title) && isset($type) && isset($message))){
+		$valid = false;
+	} elseif (strlen($title) < 1 || strlen($title) > 120){
+		$valid = false;
+	} elseif (strlen($message) < 1 || strlen($message) > 120){
+		$valid = false;
+	} elseif (strlen($type) < 1 || strlen($type) > 120) {
+		$valid = false;
+	}
+	return $valid;
 }
 ?>

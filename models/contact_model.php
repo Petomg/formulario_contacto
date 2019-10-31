@@ -24,7 +24,8 @@
 			#Se usa prepare y placeholders para intentar prevenir SQL injection.		  
 			$stmt = $this->connectdb->prepare($query);
 			
-			$stmt->execute($inquiryVector);		  
+			$stmt->execute($inquiryVector);
+	  
 		}
 
 		public function set_user($userVector){
@@ -33,6 +34,7 @@
 			$stmt = $this->connectdb->prepare($query);
 			
 			$stmt->execute($userVector);
+
 		}
 
 		#Getters
@@ -45,7 +47,8 @@
 		public function get_users(){
 			$query = "SELECT * FROM users";
 			$this->users = $this->connectdb->query($query)->fetchAll();
-			return $this->users;	
+			return $this->users;
+
 		}
 
 

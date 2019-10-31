@@ -9,8 +9,8 @@
 	$arr = $connect->get_inquiries();
 	$arr2 = $connect->get_users();
 
-	#print_r($arr2);
-	if(verif_user('asd', 'asd', 'peto@gmail.com','asd')){
+	print_r($arr2[sizeof($arr2) - 1]['user_id']);
+	if(verif_inquirie('asd', 'asd', 'asd')){
 		echo "sirve";
 	}
 		
