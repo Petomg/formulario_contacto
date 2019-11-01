@@ -1,0 +1,64 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+form {
+	background-color: #EAEDE6;
+	padding: 2em;
+	display: inline-block;
+}
+
+.contact_label{
+	display: block;
+	margin-bottom: 0.5em;
+	color: #1C568C;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+#first_name, #last_name, #company, #title, #email{
+	padding: 0.3em;
+	margin-bottom: 1.5em;
+	width: 98%;
+}
+
+#inq_type {
+	padding: 0.3em;
+	margin-bottom: 1.5em;
+	width: 100%
+}
+
+select {
+	background-color: white;
+}
+
+#message {
+	width: 99%;
+	height: 5em;
+	margin-bottom: 1.5em;
+}
+
+#form_title{
+	color: #1C568C;
+	
+}
+
+#send_button {
+	padding: 1em;
+	color: white;
+	background-color: #272829;
+	border-color: #272829;
+	border-radius: 0.2em;
+	margin-bottom: 2em;
+
+}
+
+#form_msg{
+	padding: 0.1em;
+	border-color: orange;
+	border-width: 0.2em;
+	border-style: solid;
+	color: orange;
+	background-color: transparent;
+	text-align: center;
+}
