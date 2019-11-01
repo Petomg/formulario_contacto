@@ -4,7 +4,7 @@
 	require_once '/var/www/html/formulario_contacto/views/contact_view.php';
 	require_once 'server_verif.php';
 	date_default_timezone_set('America/Argentina/Buenos_Aires');
-	
+	session_start();
 	
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -40,7 +40,19 @@
 				
 				$db->set_inquiry($inquiry_data);
 
-				$_SESSION['form_msg'] = 'Su mensaje fue enviado.';
+				#Envio el mail (dicen que mail() no trabaja en local);
+				try {
+					$to = 'petomg.pmg@gmail.com';
+					$subject = $_POST['title'];
+					$message = 'Inquiry type:'.$_POST['inq_type']."\n".$_POST['message'];
+					$headers = 'From: '.$_POST['email'];
+
+					mail($to, $subject, $message, $headers);
+					$_SESSION['form_msg'] = 'Su mensaje fue enviado.';
+				} catch (Exception $e) {
+					$_SESSION['form_msg'] = 'Surgio un problema al enviar el email';
+				}
+
 				
 		} else {
 			$_SESSION['form_msg'] = 'Alguno de los datos introducidos no es valido.';

@@ -68,7 +68,7 @@ function verif_inquirie($title, $type, $message){ # Creo que no quiero muchas ma
 		$valid = false;
 	} elseif (strlen($message) < 1 || strlen($message) > 120){
 		$valid = false;
-	} elseif (strlen($type) < 1 || strlen($type) > 120) {
+	} elseif (strlen($type) < 1 || strlen($type) > 120 || $type == '---') {
 		$valid = false;
 	}
 	return $valid;

@@ -51,6 +51,7 @@
 		<div>
 			<label for="inq_type" class="contact_label caja">Inquiry Type</label>
 			<select id="inq_type" name='inq_type' required>
+				<option value="---" selected> --- </option>
   				<option value="example1">example1</option> <!-- El atributo value me indica lo que se le envia al servidor -->
   				<option value="example2">example2</option> 
   				<option value="example3">example3</option>
