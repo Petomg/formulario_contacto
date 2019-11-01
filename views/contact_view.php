@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	$form_msg = $_SESSION['form_msg'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +14,15 @@
 	<form action="/formulario_contacto/controller/contact_controller.php" method="post" autocomplete="off">
 		<div id="form_header">
 			<h1>Send Us an Email</h1>
+			
+			<?php if(isset($form_msg)){ ?> <!-- Perdon por este bloque de codigo -->		
+				<div id='form_msg'>
+					<p><?php echo($form_msg) ?></p>
+				</div>
+			<?php } 
+				unset($_SESSION['form_msg']);
+			 ?>
+
 			<p>Please specify the nature of your request in the comment section</p>
 			<p>All fields are required</p>
 		</div>

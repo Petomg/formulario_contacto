@@ -1,15 +1,17 @@
 <?php 
+	session_start(); #inicializo una session para pasar mensajes de formulario
 	require_once '/var/www/html/formulario_contacto/models/contact_model.php';
 	require_once '/var/www/html/formulario_contacto/views/contact_view.php';
 	require_once 'server_verif.php';
 	date_default_timezone_set('America/Argentina/Buenos_Aires');
 	
+	
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-		$date = date('Y-m-d h:i:s', time());
+		$date = date('Y-m-d H:i:s', time());
 		print_r($_POST);
-		if (verif_user($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['company'])
-			&& verif_inquirie($_POST['title'], $_POST['inq_type'], $_POST['message'])){
+		if (verif_user($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['company']) #Esta condicion larga
+			&& verif_inquirie($_POST['title'], $_POST['inq_type'], $_POST['message'])){				  # no me agrada
 
 				$db = new ContactModel();
 
@@ -38,17 +40,14 @@
 				
 				$db->set_inquiry($inquiry_data);
 
-				echo "COMPLETADO";
-				//TODO: Mandar con mensaje de completado
+				$_SESSION['form_msg'] = 'Su mensaje fue enviado.';
+				
 		} else {
-
-			//TODO: Mandar error por $_SESSION a view
-			echo "NO DATOS VALIDOS";
+			$_SESSION['form_msg'] = 'Alguno de los datos introducidos no es valido.';
 		}
 
-	} else {
-		echo "NO ENTRA POR POST";
 	}
-	//header('/www/var/html/formulario_contacto/views/contact_view.php');
-	//die();
+
+	header('Location: /formulario_contacto/views/contact_view.php');
+	die();
 ?>
