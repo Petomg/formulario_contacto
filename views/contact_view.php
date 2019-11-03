@@ -11,6 +11,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="stylesheet" type="text/css" href="../styles/contact_view.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script type="text/javascript" src="../scripts/verif_contact.js"></script>
 
 </head>
 <body>
@@ -85,6 +87,10 @@
 			<div>
 				<label for="message" class="contact_label">Message</label>
 				<textarea id="message" name="message" required></textarea>
+			</div>
+			<div id="captcha">
+				<p>Please tick the box to continue:</p>
+				<div class="g-recaptcha" data-sitekey="6LeD2MAUAAAAALcwOj4nnroqNf3BjBYBCkgObZJa"></div>
 			</div>
 			<div>
 				<button type="submit" id='send_button'>Send Message</button>
