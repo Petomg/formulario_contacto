@@ -16,13 +16,22 @@
 <body>
 		<div id='header'>
 			<img src="../imgs/eire_logo.jpg">
-			<nav>
-				<ul>
-					<li><a href="">About</a></li>
-					<li><a href="">News</a></li>
-					<li><a href="">Careers</a></li>
-					<li><a href="">Contact</a></li>
-				</ul>
+			<nav role = "navigation">
+				<div id="menuToggle">
+
+					<input type="checkbox">
+
+					<span></span>
+					<span></span>
+					<span></span>
+
+					<ul id = "menu">
+						<li><a href="">About</a></li>
+						<li><a href="">News</a></li>
+						<li><a href="">Careers</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</div>	
 			</nav>
 		</div>
 		<div id='main_image'>
