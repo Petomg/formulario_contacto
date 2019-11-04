@@ -233,6 +233,11 @@ a:hover
 
 	}
 
+	.g-recaptcha {
+    	transform:scale(0.85);
+    	transform-origin:0 0;
+	}
+
 }
 
 
@@ -334,7 +339,7 @@ select {
 #send_button {
 	padding: 1em;
 	color: white;
-	background-color: #272829;
+	background-color: #8F9EA6;
 	border-color: #272829;
 	border-radius: 0.2em;
 	margin-bottom: 2em;

@@ -12,7 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="../styles/contact_view.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<script type="text/javascript" src="../scripts/verif_contact.js"></script>
 
 </head>
 <body>
@@ -90,12 +89,16 @@
 			</div>
 			<div id="captcha">
 				<p>Please tick the box to continue:</p>
-				<div class="g-recaptcha" data-sitekey="6LeD2MAUAAAAALcwOj4nnroqNf3BjBYBCkgObZJa"></div>
+				<div class="g-recaptcha" data-callback="verifyCaptcha" data-sitekey="6LeD2MAUAAAAALcwOj4nnroqNf3BjBYBCkgObZJa">
+				</div>
 			</div>
 			<div>
-				<button type="submit" id='send_button'>Send Message</button>
+				<button type="submit" id='send_button' disabled>Send Message</button>
 			</div>
 		</form>
 	<!-- TODO: AGREGAR RECAPCHA -->
 </body>
+
+<script type="text/javascript" src="../scripts/verif_contact.js"></script>
+
 </html>
